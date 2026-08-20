@@ -19,7 +19,7 @@ Built as a Phase 1 exploration of **harness engineering for LLM agents**: the su
 ### 1. Clone the repository
 
 ```bash
-git clone <repo-url> ### update
+git clone https://github.com/mkhan-7/Clair.git
 cd Clair
 ```
 
@@ -43,16 +43,21 @@ pip install -r requirements.txt
 
 ### 4. Configure your API key
 
-Copy `.env` and fill in your key:
+Copy the example env file and fill in your key:
 
 ```bash
-# .env is already present — open it and replace the placeholder:
+cp .env.example .env
+```
+
+Then open `.env` and replace the placeholder with your actual key:
+
+```
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 ```
 
-To use OpenAI instead:
+To use OpenAI instead, set both values in `.env`:
 
-```bash
+```
 OPENAI_API_KEY=your_openai_api_key_here
 LLM_PROVIDER=openai
 ```
